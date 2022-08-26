@@ -6,19 +6,17 @@
   justify-content: space-between;
   align-items: center;
 }
-.main .navContainer .navWrapper div {
+.main .navContainer .navWrapper .logoText {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0;
   padding: 0;
   color: var(--primary-color);
 }
-.main .navContainer .navWrapper div .logoText1 {
-  font-size: 2.4rem;
-  margin-right: -4px;
-  margin-top: -5px;
+.main .navContainer .navWrapper .logoText .logoText1 {
+  font-size: 1.4rem;
 }
-.main .navContainer .navWrapper div .logoText2 {
+.main .navContainer .navWrapper .logoText .logoText2 {
   font-size: 1.4rem;
 }
 .main .navContainer .navWrapper .menuIcon {

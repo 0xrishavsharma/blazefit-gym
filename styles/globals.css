@@ -17,6 +17,10 @@ a {
   box-sizing: border-box;
 }
 
+li{
+  list-style: none;
+}
+
 :root{
   /* Fonts */
   --primary-font: 'Red Hat Display', sans-serif;
@@ -25,6 +29,8 @@ a {
   /* Color theme */
   --primary-color: rgb(255, 157, 0);
   --primary-color-dark: rgb(255, 149, 0);
+  --primary-color-light: rgb(248, 177, 78);
+
 }
 
 @media (prefers-color-scheme: dark) {
