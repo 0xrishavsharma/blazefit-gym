@@ -29,8 +29,9 @@ li{
   /* Color theme */
   --primary-color: rgb(255, 157, 0);
   --primary-color-dark: rgb(255, 149, 0);
-  --primary-color-light: rgb(248, 177, 78);
-
+  --primary-color-light: rgb(251, 159, 31);
+  --primary-color-lighter: rgb(255, 187, 92);
+  --secondary-black-light: rgb(27 27 27 / 82%);
 }
 
 @media (prefers-color-scheme: dark) {

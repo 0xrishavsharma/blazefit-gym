@@ -1,13 +1,27 @@
+.section{
+    margin-top: 5rem;
+}
+
 .main{
-    padding: 1rem;
-    height: 100vh;
     position: relative;
+    overflow: hidden;
    
     .navContainer{
+        background-color: transparent;
+        position: relative;
+        padding: 1rem;
         .navWrapper{
+            box-sizing: border-box;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            padding: 1rem;
+            height: 60px;
             .logoText{
                 font-size: 1.4rem;
                 font-weight:800;
@@ -58,22 +72,30 @@
                         transition: 0.3s;
                     }
                     .navRegistration{
-                        color: white;
-                        background-color: var(--primary-color);
                         padding: 1rem 1.5rem;
                         width: max-content;
                         font-weight: 600;
+                        background-color: white;
+                        color: black;
+                        transition: 0.3s;
+                    }
+                    .navRegistration:hover{
                         background-color: var(--primary-color);
                         color: white;
-                        border: 2px solid var(--primary-color-light);
+                        box-shadow: rgba(236, 236, 236, 0.853) 0px 8px 24px;
                     }
                 }
             }
         }
     }
+    // Header
     .header{
+        position: relative;
+        width: 100%;
         .headerWrapper{
-            padding-top: 7rem;
+            padding: 1rem;
+            padding-top: 9rem;
+            padding-bottom: 0rem;
             .heading{
                 display: flex;
                 flex-direction: column;
@@ -132,26 +154,190 @@
                 
             }
             .headerBottom{
-                // position: absolute;
-                // bottom: 0rem;
-                // right: 0;
-                border: 1px solid red;
-                overflow: auto;
                 .headerImgWrapper{
+                    margin-top: 6.15rem;
+                    position: relative;
                     .headerImg{
-                        //    z-index: 1;
-                            display: block;
-                        }
+                        z-index: 1;
+                        position: absolute;
+                        bottom: 0;
+                    }
                 }
-                
                 .headerBg{
+                    box-sizing: border-box;
                     background-color: var(--primary-color);
-                    // position: absolute;
-                    // bottom: 0.3rem;
-                    // right: 0;
+                    position: absolute;
+                    bottom: 0.3rem;
+                    right: 0;
                     height: 30vh;
-                    width: 100vw;
+                    width: 100%;
                     clip-path: polygon(100% 0, 0 100%, 100% 100%);
+                }
+            }
+        }
+    }
+    // Companies logos
+    .logos{
+        .logosWrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            justify-items: center;
+
+            .logoImg{
+                
+            }
+        }
+    }
+
+    // Our programs
+    .programs{
+        padding: 1rem;
+        .programsWrapper{
+            .programsHeading{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                justify-content: center;
+                align-items: center;
+                h4{
+                    font-family: var(--secondary-font);
+                    color: var(--primary-color);
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                    transform: rotate(-3deg);
+                }
+                h2{
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 1.6rem;
+                    .mainHeading1{
+                        -webkit-text-stroke: 1px white;
+                        color: transparent;
+                    }
+
+                }
+            }
+            .programsCardsContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                .programsImgContainer{
+                    background-color: #ffffffad;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .programsCard{
+                    margin-top: 2rem;
+                    background-color: var(--secondary-black-light);
+                    padding: 1rem;
+                    width: 60%;
+                    max-width: fit-content;
+                    transition: 0.3s;
+                    position: relative;
+                    height: 245px;
+
+                    h5{
+                        font-size: 18px;
+                        font-weight: 800;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        font-size: 14px;
+                        color:  #ffffffde;
+                    }
+                    .programArrowIcon{
+                        position: absolute;
+                        bottom: 1rem;
+                        right: 1.5rem;
+                        transition: 0.3s;
+                    }
+                }
+                .programsCard:hover{
+                    background-color: var(--primary-color-light);
+                }
+                .programsCard:hover .programArrowIcon{
+                    transform: translateX(4px);
+                }
+                .programsCard1{
+                    background-color: var(--primary-color-light);
+                }
+            }
+        }
+    }
+    // Why Choose Us
+    .chooseUs{
+        padding: 1rem;
+        .chooseUsWrapper{
+            .programsHeading{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                justify-content: center;
+                align-items: center;
+                h4{
+                    font-family: var(--secondary-font);
+                    color: var(--primary-color);
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                    transform: rotate(-3deg);
+                }
+                h2{
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 1.6rem;
+                    .mainHeading1{
+                        -webkit-text-stroke: 1px white;
+                        color: transparent;
+                    }
+                }
+            }
+            .chooseUsPara{
+                font-size: 14px;
+                color: #ffffffde;
+                text-align: center;
+                margin-top: 2rem;
+            }
+            .chooseUsStats{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                margin-top: 4rem;
+                gap: 2rem;
+                .csStatsCard{
+                    .csStatsCardWrapper{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.4rem;
+                        h5{
+                            font-family: var(--secondary-font);
+                            font-size: 1.5rem;
+                            margin: 0;
+                        }
+                        p{
+                            font-size: 12px;
+                            color:#ffffffc5;
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }

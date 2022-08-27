@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
-
+// Opening and closing Nav menu when clicked on menuOpen and menuClose btn
 const menuOpen = async (e) => {
   e.preventDefault();
   let navMenu = document.querySelector("#navMenu");
@@ -20,6 +20,7 @@ const menuClose = (e) => {
   navMenu.style.right = "-100%";
 }
 
+// Closing the menu if use click on any navLink
 const linkAction = (e) => {
   e.preventDefault();
   let navMenu = document.querySelector("#navMenu");
@@ -28,19 +29,41 @@ const linkAction = (e) => {
 
 
 
+  // Change background of header after scrolls a certain distance on the screen
+  const scrollBackground = () => {
+    let navWrapper = document.querySelector("#navWrapper");
+    navWrapper.style.boxShadow = "rgba(236, 236, 236, 0.453) 0px 8px 24px;"
+    navWrapper.style.backgroundColor = "black";
+    // if (typeof this != "undefined") {
+    //   console.log("This is me speaking form inside of scrollBackground function")
+    //   this.scrollY >= 50 ? (navWrapper.style.boxShadow = "black 0px 8px 24px;")
+    //   : navWrapper.style.boxShadow = "none";
+    //   this.scrollY >= 50 ? navWrapper.style.backgroundColor = "black"
+    //     : navWrapper.style.backgroundColor = "none";
+      
+    // } 
+  }
+  if (typeof window != "undefined") {
+    window.addEventListener('scroll', scrollBackground)
+  }
+
+
+
 export default function Home() {
 
+  // Closing the nav menu if user clicks anywhere on the screen except the menu itself
   const menuRef = useRef();
   useEffect(() => {
     if (typeof window != "undefined") {
-      let main = window.document.querySelector("#main");
-      let navMenu = window.document.querySelector("#navMenu");
+      let main = document.querySelector("#main");
+      let navMenu = document.querySelector("#navMenu");
       main.addEventListener('click', async (e) => {
         if (!menuRef.current.contains(e.target)) {
           e.preventDefault();
           navMenu.style.right = "-100%";
         }
       })
+      
     }
   }, [])
   
@@ -58,13 +81,14 @@ export default function Home() {
 
       <main className={styles.main} id="main">
         {/* Navigation */}
-        <div className={styles.navContainer}>
-          <div className={styles.navWrapper}>
+        <div className={styles.navContainer} id="navContainer" >
+          <div className={styles.navWrapper} id="navWrapper">
             <div className={styles.logoText}>
               <span className={styles.logoText1}>Blaze</span>
               <span className={styles.logoText2}>fit</span>
             </div>
             <a href="" onClick={menuOpen} id="menuOpen"><MenuIcon className={styles.menuIcon}  /></a>
+            
             <div className={styles.navMenu} id="navMenu" ref={menuRef}>
               <a href="" onClick={menuClose}><CloseIcon className={styles.closeIcon} /></a>
               <ul className={styles.navMenuList}>
@@ -79,14 +103,14 @@ export default function Home() {
         </div>
         
         {/* Header */}
-        <div className={styles.header}>
+        <div className={styles.header} id="header">
           <div className={styles.headerWrapper}>
             <div className={styles.heading}>
               <span className={styles.heading1}>Be the you</span>
               <span className={styles.heading2}>You want to be</span>
             </div>
             <h4 className={styles.subheading}>
-              Live your best life by achieving your fitness goal. 
+              Live your best life by achieving your fitness goal
             </h4>
             <button className={styles.headerBtn}>
               Get Started
@@ -94,25 +118,92 @@ export default function Home() {
             </button>
             <div className={styles.headerBottom}>
               <div className={styles.headerImgWrapper}><Image src="/../public/img/home-img.png" className={styles.headerImg} width="1219px" height="1055px" alt="" /></div>
+              {/* <Image src="/../public/img/home-img.png" className={styles.headerImg} width="1219px" height="1055px" alt="" /> */}
               <div className={styles.headerBg}> </div>
             </div>
           </div>
         </div>
 
         {/* Company Logos */}
-        <div className={[styles.logos, styles.section].join()}>
+        <div className={[styles.logos, styles.section].join(" ")} id="logos">
           <div className={styles.logosWrapper}>
-            <Image src="/../public/img/logo1.png" className={styles.logoImg} width="100px" height="30px" alt="logoImage" />
-            <Image src="/../public/img/logo2.png" className={styles.logoImg} width="100px" height="30px" alt="logoImage" />
-            <Image src="/../public/img/logo3.png" className={styles.logoImg} width="100px" height="30px" alt="logoImage" />
-            <Image src="/../public/img/logo4.png" className={styles.logoImg} width="100px" height="30px" alt="logoImage" />
+            <Image src="/../public/img/logo1.png" className={styles.logoImg} width="100" height="30" layout={'fixed'} alt="logoImage" />
+            <Image src="/../public/img/logo2.png" className={styles.logoImg} width="110" height="35" layout={'fixed'} alt="logoImage" />
+            <Image src="/../public/img/logo3.png" className={styles.logoImg} width="120" height="40" layout={'fixed'} alt="logoImage" />
+            <Image src="/../public/img/logo4.png" className={styles.logoImg} width="110" height="35" layout={'fixed'} alt="logoImage" />
           </div>
         </div>
 
         {/* Our Programs */}
+        {/* `${styles.projectsPdText} ${styles.projectsPdSubdetail}`} */}
+        <div className={[styles.programs ,styles.section].join(" ")} id="programs">
+          <div className={styles.programsWrapper}>
+            <div className={styles.programsHeading}>
+              <h4 className={styles.subheading}>Our Programs</h4>
+              <h2 className={styles.mainHeading}> <span className={styles.mainHeading1}>Build your</span> <span className={styles.mainHeading2}>Best Body</span></h2>
+            </div>
+            <div className={styles.programsCardsContainer}>
+                <div className={[styles.programsCard, styles.programsCard1].join(" ")}>
+                  <div className={styles.programsImgContainer}><Image src="/../public/img/program1.png" width={30} height={30} alt="dumbbell" /></div>
+                    <h5>Lean Body</h5>
+                    <p>Our apex program. Build lean muscle and see visible in just 30 days</p>
+                    <ArrowForwardIcon className={styles.programArrowIcon}/ >
+                </div>
+                <div className={styles.programsCard}>
+                    <div className={styles.programsImgContainer}><Image src="/../public/img/program3.png" width={30} height={30} alt="dumbbell" /></div>
+                    <h5>Weight Gain</h5>
+                    <p>Tried everything method to gain weight? &nbsp;There is always a missing piece, we will give you that</p>
+                    <ArrowForwardIcon className={styles.programArrowIcon} / >
+                </div>
+                <div className={styles.programsCard}>
+                  <div className={styles.programsImgContainer}><Image src="/../public/img/program4.png" width={30} height={30} alt="dumbbell" /></div>
+                    <h5>Cardio Training</h5>
+                    <p>Our certified trainers will help you to build your stamina. Visible results in 14 days.</p>
+                    <ArrowForwardIcon className={styles.programArrowIcon}/ >
+                </div>
+              </div>
+            </div>
+        </div>
 
-        {/* WHy choose us */}
-
+        {/* Why choose us */}
+        <div className={[styles.chooseUs, styles.section].join(" ")} id="chooseUs">
+          <div className={styles.chooseUsWrapper}>
+            <div className={styles.programsHeading}>
+              <h4 className={styles.subheading}>Best Reason</h4>
+              <h2 className={styles.mainHeading}> <span className={styles.mainHeading1}>Why</span> <span className={styles.mainHeading2}>Choose Us ?</span></h2>
+            </div>
+            <p className={styles.chooseUsPara}>Having a legacy of 13+ years we are here to make you fit and healthy </p>
+            <div className={styles.chooseUsStats}>
+              <div className={styles.csStatsCard}>
+                <div className={styles.csStatsCardWrapper}>
+                  <h5>2000+</h5>
+                  <p>Members Worldwide</p>
+                </div>
+              </div>
+              <div className={styles.csStatsCard}>
+                <div className={styles.csStatsCardWrapper}>
+                  <h5>500+</h5>
+                  <p>Certified Trainers</p>
+                </div>
+              </div>
+              <div className={styles.csStatsCard}>
+                <div className={styles.csStatsCardWrapper}>
+                  <h5>20+</h5>
+                  <p>Fitness Programs</p>
+                </div>
+              </div>
+              <div className={styles.csStatsCard}>
+                <div className={styles.csStatsCardWrapper}>
+                  <h5>10+</h5>
+                  <p>Awards</p>
+                </div>
+              </div>
+            </div>
+            <div className="chooseUsImg">
+              
+            </div>
+          </div>
+        </div>
         {/* Pricing */}
 
         {/* BMI calculator */}

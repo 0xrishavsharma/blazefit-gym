@@ -1,5 +1,7 @@
 .main {
   padding: 1rem;
+  height: 100vh;
+  position: relative;
 }
 .main .navContainer .navWrapper {
   display: flex;
@@ -8,7 +10,7 @@
 }
 .main .navContainer .navWrapper .logoText {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
   padding: 0;
   color: var(--primary-color);
@@ -21,4 +23,118 @@
 }
 .main .navContainer .navWrapper .menuIcon {
   font-size: 2rem;
+}
+.main .navContainer .navWrapper .navMenu {
+  height: 100vh;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.132);
+  -webkit-backdrop-filter: blur(42px);
+  backdrop-filter: blur(42px);
+  border-left: 1px solid rgba(255, 255, 255, 0.227);
+  transition: right 0.3s;
+}
+.main .navContainer .navWrapper .navMenu .closeIcon {
+  position: absolute;
+  right: 1.4rem;
+  top: 1.2rem;
+  font-size: 1.8rem;
+}
+.main .navContainer .navWrapper .navMenu .navMenuList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+}
+.main .navContainer .navWrapper .navMenu .navMenuList .navItem {
+  width: max-content;
+}
+.main .navContainer .navWrapper .navMenu .navMenuList .navItem:hover {
+  color: var(--primary-color-dark);
+  transition: 0.3s;
+}
+.main .navContainer .navWrapper .navMenu .navMenuList .navRegistration {
+  color: white;
+  background-color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  width: max-content;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color-light);
+}
+.main .header .headerWrapper {
+  padding-top: 7rem;
+}
+.main .header .headerWrapper .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .header .headerWrapper .heading .heading1 {
+  color: transparent;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px white;
+  margin: auto;
+  font-weight: 800;
+}
+.main .header .headerWrapper .heading .heading2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: auto;
+  font-weight: 800;
+}
+.main .header .headerWrapper .subheading {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.901);
+  font-weight: 400;
+  margin-top: 1rem;
+  text-align: center;
+}
+.main .header .headerWrapper .headerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color-light);
+  outline: none;
+}
+.main .header .headerWrapper .headerBtn .headerArrowIcon {
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: transform 0.3s;
+}
+.main .header .headerWrapper .headerBtn:hover {
+  cursor: pointer;
+}
+.main .header .headerWrapper .headerBtn:hover .headerArrowIcon {
+  transform: translateX(4px);
+}
+.main .header .headerWrapper .headerBottom {
+  border: 1px solid red;
+  overflow: auto;
+}
+.main .header .headerWrapper .headerBottom .headerImgWrapper .headerImg {
+  display: block;
+}
+.main .header .headerWrapper .headerBottom .headerBg {
+  background-color: var(--primary-color);
+  height: 30vh;
+  width: 100vw;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
