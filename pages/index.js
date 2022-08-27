@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 // Opening and closing Nav menu when clicked on menuOpen and menuClose btn
@@ -176,35 +177,60 @@ export default function Home() {
             <div className={styles.chooseUsStats}>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>2000+</h5>
+                  <h5>2000 <span>+</span></h5>
                   <p>Members Worldwide</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>500+</h5>
+                  <h5>500 <span>+</span></h5>
                   <p>Certified Trainers</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>20+</h5>
+                  <h5>20 <span>+</span></h5>
                   <p>Fitness Programs</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>10+</h5>
+                  <h5>10 <span>+</span></h5>
                   <p>Awards</p>
                 </div>
               </div>
             </div>
-            <div className="chooseUsImg">
-              
+            <div className={styles.chooseUsImg}>
+              <div className={styles.chooseUsImgWrapper}><Image src="/../public/img/choose-img.png" className={styles.chooseUsImg} width={400} height={520} alt="chooseUsImage" /></div>
+              <div className={styles.chooseUsImgBG}></div>
             </div>
           </div>
         </div>
+
         {/* Pricing */}
+        <div className={[styles.pricing, styles.section].join(" ")}>
+          <div className={styles.pricingWrapper}>
+            <div className={styles.programsHeading}>
+                <h4 className={styles.subheading}>Pricing</h4>
+                <h2 className={styles.mainHeading}> <span className={styles.mainHeading1}>Our</span> <span className={styles.mainHeading2}>Best Plans</span></h2>
+            </div>
+            <div className={styles.pricingCardsWrapper}>
+              <div className={styles.pricingCard}>
+                <div className={styles.pricingImgContainer}><Image src="/../public/img/pricing1.png" className={styles.pricingImg} width={30} height={30} alt="dumbbell" /></div>
+                <h4>Basic Package</h4>
+                <h3>$119</h3>
+                <div className={styles.pricingChecklist}>
+                  <li className={[styles.listItem, styles.listItem1].join(" ")}> <CheckCircleIcon/> 4 days a week</li>
+                  <li className={[styles.listItem, styles.listItem2].join(" ")}> <CheckCircleIcon/> 1 Sweatshirt</li>
+                  <li className={[styles.listItem, styles.listItem3].join(" ")}> <CheckCircleIcon/> Protein powder</li>
+                  <li className={[styles.listItem, styles.listItem4].join(" ")}> <CheckCircleIcon/> Full Body Stretching</li>
+                  <li className={[styles.listItem, styles.listItem5].join(" ")}> <CheckCircleIcon/> Yoga</li>
+                </div>
+                <button className={styles.pricingBtn}>Purchase Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* BMI calculator */}
 

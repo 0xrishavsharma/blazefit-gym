@@ -31,9 +31,13 @@
 
                 .logoText1{
                     font-size: 1.4rem;
+                    -webkit-text-stroke: 0.7px white;
+                    color: rgb(22, 22, 22);
                 }
                 .logoText2{
                     font-size: 1.4rem;
+                    -webkit-text-stroke: 1px var(--primary-color);
+                    color: var(--primary-color);
                 }
             }
             .menuIcon{
@@ -170,8 +174,8 @@
                     bottom: 0.3rem;
                     right: 0;
                     height: 30vh;
-                    width: 100%;
-                    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+                    width: 100%;clip-path: polygon(100% 0, 0 100%, 100% 100%);
+                    
                 }
             }
         }
@@ -240,7 +244,7 @@
                     margin-top: 2rem;
                     background-color: var(--secondary-black-light);
                     padding: 1rem;
-                    width: 60%;
+                    width: 80%;
                     max-width: fit-content;
                     transition: 0.3s;
                     position: relative;
@@ -277,8 +281,9 @@
     }
     // Why Choose Us
     .chooseUs{
-        padding: 1rem;
+        position: relative;
         .chooseUsWrapper{
+            padding: 1rem;
             .programsHeading{
                 display: flex;
                 flex-direction: column;
@@ -331,6 +336,9 @@
                             font-family: var(--secondary-font);
                             font-size: 1.5rem;
                             margin: 0;
+                            span{
+                                color: var(--primary-color);
+                            }
                         }
                         p{
                             font-size: 12px;
@@ -340,6 +348,112 @@
                     }
                 }
             }
+            .chooseUsImg{
+                margin-top: 4rem;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                .chooseUsImgWrapper{
+                    height: 300px;
+                    width: 250px;
+                    // bottom: 3.5rem;
+                    position: absolute;
+                    .chooseUsImg{
+                        z-index: 1;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+                .chooseUsImgBG{
+                    box-sizing: border-box;
+                    background-color: var(--primary-color);
+                    position: absolute;
+                    bottom: 0rem;
+                    left: 0rem;
+                    height: 30vh;
+                    width: 100vw;
+                    clip-path: polygon(0 0, 0 100%, 100% 100%);
+                }
+            }
+        }
+    }
+
+    // Pricing
+    .pricing{
+        padding: 1rem;
+        .pricingWrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .programsHeading{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                justify-content: center;
+                align-items: center;
+                h4{
+                    font-family: var(--secondary-font);
+                    color: var(--primary-color);
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                    transform: rotate(-3deg);
+                }
+                h2{
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 1.6rem;
+                    .mainHeading1{
+                        -webkit-text-stroke: 1px white;
+                        color: transparent;
+                    }
+                }
+            }
+            .pricingCard{
+                margin-top: 2rem;
+                background-color: var(--secondary-black-light);
+                padding: 1.5rem 2rem;
+                // width: 100%;
+                // max-width: max-content;
+                .pricingImgContainer{
+                    background-color: #ffffffad;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .pricingImg{
+                    }
+                }
+                h4{
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    color: rgba(255, 255, 255, 0.881);
+                }
+                h3{
+                    font-size: 1.4rem;
+                }
+                .pricingChecklist{
+                    li{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 0.5rem;
+                        margin-bottom: 0.8rem;
+                    }
+                }
+            }
+            
         }
     }
 }
