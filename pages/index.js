@@ -247,13 +247,13 @@ export default function Home() {
             <div className={styles.programsCardsContainer}>
                 <div className={[styles.programsCard, styles.programsCard1].join(" ")}>
                   <div className={styles.programsImgContainer}><Image src="/../public/img/program1.png" width={30} height={30} alt="dumbbell" /></div>
-                    <h5>Lean Body</h5>
+                    <h5>Muscle Strength</h5>
                     <p>Our apex program. Build lean muscle and see visible in just 30 days</p>
                     <ArrowForwardIcon className={styles.programArrowIcon}/ >
                 </div>
                 <div className={styles.programsCard}>
                     <div className={styles.programsImgContainer}><Image src="/../public/img/program3.png" width={30} height={30} alt="dumbbell" /></div>
-                    <h5>Weight Gain</h5>
+                    <h5>Weight Management</h5>
                     <p>Tried everything method to gain weight? &nbsp;There is always a missing piece, we will give you that</p>
                     <ArrowForwardIcon className={styles.programArrowIcon} / >
                 </div>
@@ -388,14 +388,55 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Footer */}
-
       </main>
 
-      <footer className={styles.footer}>
-        
-          
-      </footer>
+        {/* Footer */}
+        <footer className={[styles.footer, styles.section].join(" ")}>
+          <div className={styles.footerWrapper}>
+            <div className={styles.footerLogo}>
+              <span className={styles.footerLogo1}>Blaze</span> 
+              <span className={styles.footerLogo2}>fit</span>
+            </div>
+            <div className={styles.footerNewsletter}>
+              <h5>Get weekly dose of motivation by subscribing to our Free newsletter</h5>
+              <input type="email" placeholder='Your email' />
+              <button className="submitBtn">Subscribe</button>
+            </div>
+            <div className={styles.footerNavLinks}>
+              <div className={styles.footerServicesLinks}>
+                <h5>Services</h5>
+                <div className={styles.footerLinkItem}>
+                  <a href=""><li>Muscle Strength</li></a>
+                  <a href=""><li>Weight Management</li></a>
+                  <a href=""><li>Cardio Training</li></a>
+                </div>
+                
+              </div>
+            <div className={styles.footerPricingLinks}>
+                <h5>Pricing</h5>
+                <div className={styles.footerLinkItem}>
+                  <a href=""><li>Basic</li></a>
+                  <a href=""><li>Gold</li></a>
+                  <a href=""><li>Premium</li></a>
+                </div>
+               
+              </div>
+            <div className={styles.footerCompanyLinks}>
+                <h5>About Us</h5>
+                <div className={styles.footerLinkItem}>
+                  <a href=""><li>Contact Us</li></a>
+                  <a href=""><li>Careers</li></a>
+                  <a href=""><li>Partners</li></a>
+                </div>
+                
+              </div>
+            </div>
+            <div className={[styles.copyright, styles.section].join(" ")}>
+              © copyright 2022, Rishav Sharma
+            </div>
+          </div>
+        </footer>
+      
     </div>
   )
 }
