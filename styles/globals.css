@@ -29,7 +29,7 @@ li{
   /* Color theme */
   --primary-color: rgb(255, 157, 0);
   --primary-color-dark: rgb(255, 149, 0);
-  --primary-color-light: rgb(251, 159, 31);
+  --primary-color-light: rgb(255, 168, 47);
   --primary-color-lighter: rgb(255, 193, 105);
   --secondary-black-light: rgb(27 27 27 / 82%);
 }

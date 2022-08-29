@@ -188,10 +188,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             justify-items: center;
-
-            .logoImg{
-                
-            }
         }
     }
 
@@ -225,7 +221,6 @@
                         -webkit-text-stroke: 1px white;
                         color: transparent;
                     }
-
                 }
             }
             .programsCardsContainer{
@@ -270,13 +265,13 @@
                     }
                 }
                 .programsCard:hover{
-                    background-color: var(--primary-color-light);
+                    background-color: var(--primary-color);
                 }
                 .programsCard:hover .programArrowIcon{
                     transform: translateX(4px);
                 }
                 .programsCard1{
-                    background-color: var(--primary-color-light);
+                    background-color: var(--primary-color);
                 }
             }
         }
@@ -495,7 +490,7 @@
                 }
             }
             .pricingCardActive{
-                background-color: var(--primary-color-light);
+                background-color: var(--primary-color);
                 .pricingChecklist{
                     .listItem{
                         .listItemIcon{
@@ -640,11 +635,16 @@
         }
         input{
             width: 100%;
-            padding: 1.5rem 1.5rem;
+            height: 70px;
+            padding: 0.5rem 1.5rem;
             background-color: transparent;
             outline: none;
             border: 1px solid var(--primary-color);
             font-size: 15px;
+            transition: 0.3s;
+        }
+        input::placeholder{
+            opacity: 0.7;
         }
         button{
             outline: none;
@@ -660,7 +660,7 @@
     .footerNavLinks{
         margin-top: 4rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
         gap: 3rem;
         .footerServicesLinks, .footerPricingLinks, .footerCompanyLinks{
             display: flex;
@@ -671,16 +671,54 @@
                 margin-bottom: 1.6rem;
                 margin-top: 1rem;
             }
-            .footerLinkItem{
+            .footerCompanyLinksWrapper{
                 display: flex;
                 flex-direction: column;
                 gap: 0.8rem;
                 opacity: 0.8;
+                transition: color 0.3s;
+                a{
+                    transition: color 0.3s;
+                }
+                a:hover{
+                    color: var(--primary-color);
+                }
             }
+
         }
     }
-    .copyright{
+    .copyrightSocial{
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .footerSocialLinks{
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            a{
+                background-color: var(--primary-color);
+                padding: 0.35rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: 0.3s;
+                
+                .socialLinksIcon{
+                    font-size: 1.4rem;
+                }
+            }
+            a:hover{
+                background-color: var(--primary-color);
+            }
+        }
+        .copyright{
+            margin-bottom: 1rem;
+            font-size: 12px;
+            opacity: 0.8;
+        }
     }
     }
 }

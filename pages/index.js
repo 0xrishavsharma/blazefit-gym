@@ -2,10 +2,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { useEffect, useRef } from 'react';
+
+// MUI Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
+
+// MUI Social Icons
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+// EmailJs Import
+import emailjs from '@emailjs/browser';
 
 
 // Opening and closing Nav menu when clicked on menuOpen and menuClose btn
@@ -134,20 +145,11 @@ let calculatorSubmit = (e) => {
   }
 }
 
-
   // Change background of header after scrolls a certain distance on the screen
   const scrollBackground = () => {
     let navWrapper = document.querySelector("#navWrapper");
     navWrapper.style.boxShadow = "rgba(236, 236, 236, 0.453) 0px 8px 24px;"
     navWrapper.style.backgroundColor = "black";
-    // if (typeof this != "undefined") {
-    //   console.log("This is me speaking form inside of scrollBackground function")
-    //   this.scrollY >= 50 ? (navWrapper.style.boxShadow = "black 0px 8px 24px;")
-    //   : navWrapper.style.boxShadow = "none";
-    //   this.scrollY >= 50 ? navWrapper.style.backgroundColor = "black"
-    //     : navWrapper.style.backgroundColor = "none";
-      
-    // } 
   }
   if (typeof window != "undefined") {
     window.addEventListener('scroll', scrollBackground)
@@ -155,7 +157,52 @@ let calculatorSubmit = (e) => {
 
 
 
+
 export default function Home() {
+
+  // EmailJS
+  const newsletterRef = useRef();
+  const sendEmail = (event) => {
+    event.preventDefault();
+
+    let newsletterError = document.querySelector("#newsletterError");
+    let newsletterInput = document.querySelector("#newsletterInput");
+    let submitBtn = document.querySelector("#submitBtn");
+    if (newsletterInput.value === "") {
+      newsletterError.innerText = "Please enter a valid email address";
+      newsletterError.style.color = "red";
+      newsletterError.style.fontSize = "14px";
+      newsletterError.style.marginTop = "0.8rem";
+      newsletterError.style.fontSize = "14px";
+      newsletterInput.style.border = "1px solid red"
+      submitBtn.style.marginTop = "1.2rem"
+      setTimeout((e) => {
+        newsletterError.innerText = "";
+        newsletterInput.style.border = "1px solid var(--primary-color-lighter)";
+      }, 4000);
+    }
+    else {
+      emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, newsletterRef.current, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+        console.log("success")
+        console.log(result.text);
+        newsletterError.style.fontSize = "14px";
+        newsletterError.style.marginTop = "0.8rem";
+        newsletterError.style.fontSize = "14px";
+        newsletterError.innerText = "Successfully subscribed to the Newsletter 🙂";
+        newsletterError.style.color = "var(--primary-color)";
+        submitBtn.style.marginTop = "1.2rem"
+        setTimeout(() => {
+          newsletterError.innerText = "";
+          newsletterInput.value = " "
+        }, 7000);
+        
+      }, (error) => {
+          alert("OOPS, something went wrong!", error)
+          console.log(error.text);
+      });
+    }
+  };
 
   // Closing the nav menu if user clicks anywhere on the screen except the menu itself
   const menuRef = useRef();
@@ -163,7 +210,7 @@ export default function Home() {
     if (typeof window != "undefined") {
       let main = document.querySelector("#main");
       let navMenu = document.querySelector("#navMenu");
-      main.addEventListener('click', async (e) => {
+      main.addEventListener('click', (e) => {
         if (!menuRef.current.contains(e.target)) {
           e.preventDefault();
           navMenu.style.right = "-100%";
@@ -194,7 +241,7 @@ export default function Home() {
             <div className={styles.navMenu} id="navMenu" ref={menuRef}>
               <a href="" onClick={menuClose}><CloseIcon className={styles.closeIcon} /></a>
               <ul className={styles.navMenuList}>
-                <a href="" onClick={linkAction}><li className={styles.navItem}>Home</li></a>
+                <a href="#header" onClick={linkAction}><li className={styles.navItem}>Home</li></a>
                 <a href="" onClick={linkAction}><li className={styles.navItem}>Program</li></a>
                 <a href="" onClick={linkAction}><li className={styles.navItem}>Choose us</li></a>
                 <a href="" onClick={linkAction}><li className={styles.navItem}>Pricing</li></a>
@@ -278,25 +325,25 @@ export default function Home() {
             <div className={styles.chooseUsStats}>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>2000 <span>+</span></h5>
+                  <h5>2000<span>+</span></h5>
                   <p>Members Worldwide</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>500 <span>+</span></h5>
+                  <h5>500<span>+</span></h5>
                   <p>Certified Trainers</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>20 <span>+</span></h5>
+                  <h5>20<span>+</span></h5>
                   <p>Fitness Programs</p>
                 </div>
               </div>
               <div className={styles.csStatsCard}>
                 <div className={styles.csStatsCardWrapper}>
-                  <h5>10 <span>+</span></h5>
+                  <h5>10<span>+</span></h5>
                   <p>Awards</p>
                 </div>
               </div>
@@ -372,7 +419,6 @@ export default function Home() {
                 <p>cm</p>
               </div>
               <p className={styles.heightErrorMsg} id="heightErrorMsg" style={{ margin: "0", padding: "0", transition: "0.3s"}}></p>
-
               <div className={styles.inputWrapper2} id="inputWrapper2">
                 <input type="number" className={styles.calculatorInput2} id="calculatorInput2" placeholder="Weight" min={0} />
                 <p>kg</p>
@@ -399,13 +445,17 @@ export default function Home() {
             </div>
             <div className={styles.footerNewsletter}>
               <h5>Get weekly dose of motivation by subscribing to our Free newsletter</h5>
-              <input type="email" placeholder='Your email' />
-              <button className="submitBtn">Subscribe</button>
+              <form onSubmit={sendEmail} ref={newsletterRef}>
+                <input type="email" id="newsletterInput" name="user_email" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-zA-Z]{2,}" placeholder='Your email'/>
+              <p className={styles.newsletterError} id="newsletterError" style={{ margin: "0", transition: "0.3s"}}></p>
+                <button type='submit' className="submitBtn" id="submitBtn">Subscribe</button>
+              </form>
+              
             </div>
             <div className={styles.footerNavLinks}>
               <div className={styles.footerServicesLinks}>
                 <h5>Services</h5>
-                <div className={styles.footerLinkItem}>
+                <div className={styles.footerCompanyLinksWrapper}>
                   <a href=""><li>Muscle Strength</li></a>
                   <a href=""><li>Weight Management</li></a>
                   <a href=""><li>Cardio Training</li></a>
@@ -414,7 +464,7 @@ export default function Home() {
               </div>
             <div className={styles.footerPricingLinks}>
                 <h5>Pricing</h5>
-                <div className={styles.footerLinkItem}>
+                <div className={styles.footerCompanyLinksWrapper}>
                   <a href=""><li>Basic</li></a>
                   <a href=""><li>Gold</li></a>
                   <a href=""><li>Premium</li></a>
@@ -423,7 +473,7 @@ export default function Home() {
               </div>
             <div className={styles.footerCompanyLinks}>
                 <h5>About Us</h5>
-                <div className={styles.footerLinkItem}>
+                <div className={styles.footerCompanyLinksWrapper}>
                   <a href=""><li>Contact Us</li></a>
                   <a href=""><li>Careers</li></a>
                   <a href=""><li>Partners</li></a>
@@ -431,9 +481,18 @@ export default function Home() {
                 
               </div>
             </div>
-            <div className={[styles.copyright, styles.section].join(" ")}>
-              © copyright 2022, Rishav Sharma
+            <div className={[styles.copyrightSocial, styles.section].join(" ")}>
+              <div className={styles.footerSocialLinks}>
+                <a href="https://www.facebook.com"><FacebookRoundedIcon className={styles.socialLinksIcon}/></a>
+                <a href="https://www.instagram.com"><InstagramIcon className={styles.socialLinksIcon}/></a>
+                <a href="https://www.twitter.com"><TwitterIcon className={styles.socialLinksIcon}/></a>
+                <a href="https://www.linkedin.com"><LinkedInIcon className={styles.socialLinksIcon}/></a>
+              </div>
+              <div className={[styles.copyright].join(" ")}>
+                &#169; copyright 2022, Rishav Sharma
+              </div>
             </div>
+            
           </div>
         </footer>
       
