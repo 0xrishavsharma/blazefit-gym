@@ -204,6 +204,22 @@ export default function Home() {
     }
   };
 
+  // Scrolling section active links
+  if (typeof window !== "undefined") {
+    let sections = document.querySelectorAll("section[id]");
+    const scrollActiveLink = () => {
+      let scrollY = window.pageYOffset;
+      sections.forEach((e) => {
+        const sectionHeight = e.offsetHeight,
+              sectionTop = e.offsetTop - 58,
+              sectionId = e.getAttribute('id'),
+              sectionsClass = do
+
+      })
+
+    } 
+  }
+
   // Closing the nav menu if user clicks anywhere on the screen except the menu itself
   const menuRef = useRef();
   useEffect(() => {
@@ -357,7 +373,7 @@ export default function Home() {
         </section>
 
         {/* Pricing */}
-        <section className={[styles.pricing, styles.section].join(" ")}>
+        <section className={[styles.pricing, styles.section].join(" ")} id="pricing">
           <div className={styles.pricingWrapper}>
             <div className={styles.programsHeading}>
                 <h4 className={styles.subheading}>Pricing</h4>
@@ -406,7 +422,7 @@ export default function Home() {
         </section>
 
         {/* BMI calculator */}
-        <section className={[styles.calculator, styles.section].join(" ")}>
+        <section className={[styles.calculator, styles.section].join(" ")} id="calculator">
           <div className={styles.calculatorWrapper}>
             <div className={styles.calculatorHeading}>
               <h4 className={styles.calculatorHeading1}>Calculate &nbsp;</h4>
@@ -437,7 +453,7 @@ export default function Home() {
       </main>
 
         {/* Footer */}
-        <footer className={[styles.footer, styles.section].join(" ")}>
+        <section className={[styles.footer, styles.section].join(" ")} id="footer" >
           <div className={styles.footerWrapper}>
             <div className={styles.footerLogo}>
               <span className={styles.footerLogo1}>Blaze</span> 
@@ -494,7 +510,7 @@ export default function Home() {
             </div>
             
           </div>
-        </footer>
+        </section>
       
     </div>
   )
