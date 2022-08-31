@@ -15,6 +15,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import emailjs from '@emailjs/browser';
 
 
+import Header from '../components/Header';
+
 
 const Footer = () => {
 
@@ -119,7 +121,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* Scroll up button */}
-            <Link href="/">
+            <Link href="#">
                 <a className={styles.scrollUp} id="scrollUp">
                     <ArrowUpwardIcon className={styles.scrollUpIcon} />
                 </a>

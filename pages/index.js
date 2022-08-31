@@ -38,10 +38,15 @@ const menuClose = (e) => {
 // Closing the menu if use click on any navLink
 const linkAction = (e) => {
   e.preventDefault();
-  if (typeof window != "undefined") {
-    let navMenu = document.querySelector("#navMenu");
-  }
+  let navMenu = document.querySelector("#navMenu");
   navMenu.style.right = "-100%";
+}
+if (typeof window != "undefined") {
+  let mobNavLink = document.querySelector("#mobNavLink");
+  mobNavLink.addEventListener('click', () => {
+    let navMenu = document.querySelector("#navMenu");
+    navMenu.style.right = "-100%";
+  })
 }
 
 
@@ -104,16 +109,16 @@ export default function Home() {
 
             <div className={styles.navMenu} id="navMenu" ref={menuRef}>
               <ul className={styles.navMenuList}>
-                <Link href="#header" onClick={linkAction}><a className={styles.activeLink} id="activeLink"><li className={styles.navItem}>Home</li></a></Link>
-                <Link href="#programs" onClick={linkAction}><a id=""><li className={styles.navItem}>Program</li></a></Link>
-                <Link href="#chooseUs" onClick={linkAction}><a id=""><li className={styles.navItem}>Choose us</li></a></Link>
-                <Link href="#pricing" onClick={linkAction}><a href=""><li  className={styles.navItem}>Pricing</li></a></Link>
-                <Link href="#pricing" onClick={linkAction}><a id=""><li className={[styles.navRegistration]}>Register Now</li></a></Link>
-                {/* <a href="#header" onClick={linkAction} className={styles.activeLink} id="activeLink"><li className={styles.navItem}>Home</li></a>
-                <a href="#programs" onClick={linkAction} id=""><li className={styles.navItem}>Program</li></a>
-                <a href="#chooseUs" onClick={linkAction} id=""><li className={styles.navItem}>Choose us</li></a>
-                <a href="#pricing" onClick={linkAction} ><li onClick={linkAction} className={styles.navItem}>Pricing</li></a>
-                <Link href="#pricing" onClick={linkAction}><a  id=""><li className={[styles.navRegistration]}>Register Now</li></a></Link> */}
+                {/* <Link href="#header"><a className={styles.activeLink} onClick={linkAction} id="homeLink"><li className={styles.navItem}>Home</li></a></Link>
+                <Link href="#programs" onClick={linkAction}><a id="mobNavLink"><li className={styles.navItem}>Program</li></a></Link>
+                <Link href="#chooseUs" onClick={linkAction}><a id="mobNavLink"><li className={styles.navItem}>Choose us</li></a></Link>
+                <Link href="#pricing" onClick={linkAction}><a id="mobNavLink"><li className={styles.navItem}>Pricing</li></a></Link>
+                <Link href="#pricing" onClick={linkAction}><a id="mobNavLink"><li className={[styles.navRegistration]}>Register Now</li></a></Link> */}
+                <Link href="#header"><a className={styles.activeLink} id="homeLink"><li className={styles.navItem}>Home</li></a></Link>
+                <Link href="#programs"><a id="mobNavLink"><li className={styles.navItem}>Program</li></a></Link>
+                <Link href="#chooseUs"><a id="mobNavLink"><li className={styles.navItem}>Choose us</li></a></Link>
+                <Link href="#pricing"><a id="mobNavLink"><li className={styles.navItem}>Pricing</li></a></Link>
+                <Link href="#pricing"><a id="mobNavLink"><li className={[styles.navRegistration]}>Register Now</li></a></Link>
               </ul>
               <div onClick={menuClose}><CloseIcon className={styles.closeIcon} /></div>
             </div>
