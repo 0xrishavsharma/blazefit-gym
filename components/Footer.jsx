@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from "./../styles/Home.module.scss";
 import Link from 'next/link';
 
@@ -18,7 +18,18 @@ import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 
 
+
+
 const Footer = () => {
+
+    // Scroll to top
+    if (typeof window !== "undefined") {
+        let scrollUp = document.querySelector("#scrollUp");
+        scrollUp.addEventListener("click", () => {
+            window.scrollTo(0, 0);
+        })
+    }
+   
 
     // EmailJS
     const newsletterRef = useRef();
@@ -121,7 +132,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* Scroll up button */}
-            <Link href="#">
+            <Link href="/">
                 <a className={styles.scrollUp} id="scrollUp">
                     <ArrowUpwardIcon className={styles.scrollUpIcon} />
                 </a>
