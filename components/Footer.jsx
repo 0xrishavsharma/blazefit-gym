@@ -121,10 +121,10 @@ const Footer = () => {
                 </div>
                 <div className={[styles.copyrightSocial, styles.section].join(" ")}>
                     <div className={styles.footerSocialLinks}>
-                        <a href="https://www.facebook.com"><FacebookRoundedIcon className={styles.socialLinksIcon} /></a>
-                        <a href="https://www.instagram.com"><InstagramIcon className={styles.socialLinksIcon} /></a>
-                        <a href="https://www.twitter.com"><TwitterIcon className={styles.socialLinksIcon} /></a>
-                        <a href="https://www.linkedin.com"><LinkedInIcon className={styles.socialLinksIcon} /></a>
+                       <Link href="" ><a href="https://www.facebook.com"><FacebookRoundedIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="" ><a href="https://www.instagram.com"><InstagramIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="" ><a href="https://www.twitter.com"><TwitterIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="https://www.linkedin.com"><a ><LinkedInIcon className={styles.socialLinksIcon} /></a></Link>
                     </div>
                     <div className={[styles.copyright].join(" ")}>
                         &#169; copyright 2022, Rishav Sharma

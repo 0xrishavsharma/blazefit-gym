@@ -176,6 +176,24 @@
   width: 100%;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
+@media screen and (max-width: 340px) {
+  .main .header .headerWrapper .heading .heading1 {
+    font-size: 1.8rem;
+  }
+  .main .header .headerWrapper .heading .heading2 {
+    font-size: 1.8rem;
+  }
+  .main .header .headerWrapper .subheading {
+    font-size: 14px;
+  }
+  .main .header .headerWrapper .headerBtn {
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+  }
+  .main .header .headerWrapper .headerBtn .headerArrowIcon {
+    font-size: 1rem;
+  }
+}
 .main .logos .logosWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -262,6 +280,22 @@
 }
 .main .programs .programsWrapper .programsCardsContainer .programsCard1 {
   background-color: var(--primary-color);
+}
+@media screen and (max-width: 340px) {
+  .main .programs .programsWrapper .programsHeading .subheading {
+    font-size: 1.3rem;
+  }
+  .main .programs .programsWrapper .programsHeading .mainHeading {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+  .main .programs .programsWrapper .programsCardsContainer .programsCard {
+    height: 260px;
+  }
+  .main .programs .programsWrapper .programsCardsContainer .programsCard2 {
+    height: 300px;
+  }
 }
 .main .chooseUs {
   padding: 1.5rem;
@@ -435,10 +469,13 @@
   font-size: 14px;
   opacity: 0.85;
 }
-.main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon1, .main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon2 {
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon1,
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon2 {
   color: var(--primary-color);
 }
-.main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem3, .main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem4, .main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem5 {
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem3,
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem4,
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem5 {
   color: rgba(129, 129, 129, 0.699);
 }
 .main .pricing .pricingWrapper .pricingCard .pricingBtn {
@@ -471,10 +508,12 @@
 .main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon {
   color: white;
 }
-.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon4, .main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon5 {
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon4,
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon5 {
   color: var(--primary-color-lightest);
 }
-.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem4, .main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem5 {
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem4,
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem5 {
   color: var(--primary-color-lightest);
 }
 .main .calculator {
@@ -510,7 +549,8 @@
   flex-direction: column;
   gap: 1rem;
 }
-.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 {
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -519,24 +559,32 @@
   padding: 0.2rem 1.5rem;
   transition: 0.3s;
 }
-.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1 {
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1 {
   outline: none;
   border: none;
   background-color: transparent;
   width: 100%;
   height: 100%;
 }
-.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
   outline: none;
   border: none;
   background-color: transparent;
   width: 100%;
   height: 100%;
 }
-.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
   font-size: 14px;
 }
-.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2::-webkit-inner-spin-button {
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1::-webkit-inner-spin-button,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2::-webkit-inner-spin-button,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1::-webkit-inner-spin-button,
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .main .calculator .calculatorWrapper .calculatorBtn {
@@ -620,27 +668,37 @@
   grid-template-columns: repeat(2, max-content);
   gap: 3rem;
 }
-.footer .footerWrapper .footerNavLinks .footerServicesLinks, .footer .footerWrapper .footerNavLinks .footerPricingLinks, .footer .footerWrapper .footerNavLinks .footerCompanyLinks {
+.footer .footerWrapper .footerNavLinks .footerServicesLinks,
+.footer .footerWrapper .footerNavLinks .footerPricingLinks,
+.footer .footerWrapper .footerNavLinks .footerCompanyLinks {
   display: flex;
   flex-direction: column;
 }
-.footer .footerWrapper .footerNavLinks .footerServicesLinks h5, .footer .footerWrapper .footerNavLinks .footerPricingLinks h5, .footer .footerWrapper .footerNavLinks .footerCompanyLinks h5 {
+.footer .footerWrapper .footerNavLinks .footerServicesLinks h5,
+.footer .footerWrapper .footerNavLinks .footerPricingLinks h5,
+.footer .footerWrapper .footerNavLinks .footerCompanyLinks h5 {
   font-size: 1.2rem;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   margin-top: 1rem;
 }
-.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper {
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper,
+.footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper,
+.footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   opacity: 0.8;
   transition: color 0.3s;
 }
-.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a {
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a,
+.footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a,
+.footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a {
   transition: color 0.3s;
 }
-.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a:hover, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a:hover, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a:hover {
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a:hover,
+.footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a:hover,
+.footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a:hover {
   color: var(--primary-color);
 }
 .footer .footerWrapper .copyrightSocial {

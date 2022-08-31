@@ -15,8 +15,8 @@ const CompanyLogos = () => {
     <div className={styles.logosWrapper}>
       <Image src={logo1} className={styles.logoImg} width="100" height="30" layout={'fixed'} alt="logoImage" />
       <Image src={logo2} className={styles.logoImg} width="110" height="35" layout={'fixed'} alt="logoImage" />
-      <Image src={logo3} className={styles.logoImg} width="120" height="40" layout={'fixed'} alt="logoImage" />
-      <Image src={logo4} className={styles.logoImg} width="110" height="35" layout={'fixed'} alt="logoImage" />
+      <Image src={logo3} className={styles.logoImg} width="120" height="35" layout={'fixed'} alt="logoImage" />
+      <Image src={logo4} className={styles.logoImg} width="110" height="30" layout={'fixed'} alt="logoImage" />
     </div>
 </section>
   )
