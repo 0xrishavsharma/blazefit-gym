@@ -61,6 +61,7 @@
                     right: 1.4rem;
                     top: 1.2rem;
                     font-size: 1.8rem;
+                    cursor: pointer;
                 }
                 .navMenuList{
                     display: flex;
@@ -68,7 +69,14 @@
                     gap: 2.5rem;
                     padding-top: 6rem ;
                     padding-bottom: 4rem ;
-                    padding-left: 3rem ;
+                    padding-left: 3rem;
+
+                    // Scroll Active Link
+                    // .activeLink {
+                    //     color: var(--primary-color);
+                    //     font-weight: 800;
+                    // }
+
                     .navItem{
                         width: max-content;
                     }
@@ -91,6 +99,7 @@
                     }
                 }
             }
+            
         }
     }
     // Header
@@ -721,4 +730,27 @@
         }
     }
     }
+    // Scroll Up Button
+    .scrollUp{
+        background-color: var(--primary-color);
+        position: fixed;
+        bottom: -30%;
+        right: 2rem;
+        padding: 0.3rem 0.4rem;
+        max-width: max-content;
+        border:1px solid var(--primary-color-lightest);
+        z-index: 1000;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        .scrollUpIcon{
+            color: white;
+            font-size:20px;
+        } 
+    }
+    .scrollUp:hover{
+        transform: translateY(-6px);
+    }
+    
 }
+

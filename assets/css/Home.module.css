@@ -9,7 +9,8 @@
 .main .navContainer {
   background-color: transparent;
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
+  padding-bottom: 0rem;
 }
 .main .navContainer .navWrapper {
   box-sizing: border-box;
@@ -62,6 +63,7 @@
   right: 1.4rem;
   top: 1.2rem;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 .main .navContainer .navWrapper .navMenu .navMenuList {
   display: flex;
@@ -96,7 +98,7 @@
   width: 100%;
 }
 .main .header .headerWrapper {
-  padding: 1rem;
+  padding: 1.5rem;
   padding-top: 9rem;
   padding-bottom: 0rem;
 }
@@ -180,7 +182,8 @@
   justify-items: center;
 }
 .main .programs {
-  padding: 1rem;
+  padding: 1.5rem;
+  padding-bottom: 0rem;
 }
 .main .programs .programsWrapper .programsHeading {
   display: flex;
@@ -251,19 +254,20 @@
   transition: 0.3s;
 }
 .main .programs .programsWrapper .programsCardsContainer .programsCard:hover {
-  background-color: var(--primary-color-light);
+  background-color: var(--primary-color);
 }
 .main .programs .programsWrapper .programsCardsContainer .programsCard:hover .programArrowIcon {
   transform: translateX(4px);
 }
 .main .programs .programsWrapper .programsCardsContainer .programsCard1 {
-  background-color: var(--primary-color-light);
+  background-color: var(--primary-color);
 }
 .main .chooseUs {
-  position: relative;
+  padding: 1.5rem;
+  padding-bottom: 0rem;
 }
 .main .chooseUs .chooseUsWrapper {
-  padding: 1rem;
+  position: relative;
 }
 .main .chooseUs .chooseUsWrapper .programsHeading {
   display: flex;
@@ -331,40 +335,40 @@
   margin-top: 4rem;
   display: flex;
   justify-content: center;
-  position: relative;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .main .chooseUs .chooseUsWrapper .chooseUsImg .chooseUsImgWrapper {
-  height: 300px;
-  width: 250px;
-  position: absolute;
+  overflow: hidden;
+  width: 230px;
+  position: relative;
+  bottom: -1rem;
 }
 .main .chooseUs .chooseUsWrapper .chooseUsImg .chooseUsImgWrapper .chooseUsImg {
   z-index: 1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
 }
 .main .chooseUs .chooseUsWrapper .chooseUsImg .chooseUsImgBG {
-  box-sizing: border-box;
   background-color: var(--primary-color);
   position: absolute;
   bottom: 0rem;
-  left: 0rem;
   height: 30vh;
   width: 100vw;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 .main .pricing {
-  padding: 1rem;
+  padding: 1.5rem;
+  padding-bottom: 0rem;
 }
 .main .pricing .pricingWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 .main .pricing .pricingWrapper .programsHeading {
   display: flex;
@@ -397,6 +401,7 @@
   margin-top: 2rem;
   background-color: var(--secondary-black-light);
   padding: 1.5rem 2rem;
+  width: 85%;
 }
 .main .pricing .pricingWrapper .pricingCard .pricingImgContainer {
   background-color: rgba(255, 255, 255, 0.6784313725);
@@ -414,6 +419,10 @@
 }
 .main .pricing .pricingWrapper .pricingCard h3 {
   font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist {
+  margin-top: 1.8rem;
 }
 .main .pricing .pricingWrapper .pricingCard .pricingChecklist li {
   display: flex;
@@ -422,4 +431,266 @@
   justify-content: flex-start;
   gap: 0.5rem;
   margin-bottom: 0.8rem;
+  font-size: 14px;
+  opacity: 0.85;
+}
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon1, .main .pricing .pricingWrapper .pricingCard .pricingChecklist li .listItemIcon2 {
+  color: var(--primary-color);
+}
+.main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem3, .main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem4, .main .pricing .pricingWrapper .pricingCard .pricingChecklist .listItem5 {
+  color: rgba(129, 129, 129, 0.699);
+}
+.main .pricing .pricingWrapper .pricingCard .pricingBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.958);
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1.8rem;
+  width: 100%;
+  cursor: pointer;
+}
+.main .pricing .pricingWrapper .pricingCard .pricingBtn .pricingBtnIcon {
+  font-size: 18px;
+  transition: 0.3s;
+}
+.main .pricing .pricingWrapper .pricingCard .pricingBtn:hover .pricingBtnIcon {
+  transform: translateX(4px);
+}
+.main .pricing .pricingWrapper .pricingCardActive {
+  background-color: var(--primary-color);
+}
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon {
+  color: white;
+}
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon4, .main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem .listItemIcon5 {
+  color: var(--primary-color-lightest);
+}
+.main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem4, .main .pricing .pricingWrapper .pricingCardActive .pricingChecklist .listItem5 {
+  color: var(--primary-color-lightest);
+}
+.main .calculator {
+  padding: 1.5rem;
+  padding-bottom: 0rem;
+}
+.main .calculator .calculatorWrapper .calculatorHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.main .calculator .calculatorWrapper .calculatorHeading .calculatorHeading1 {
+  margin: 0;
+  -webkit-text-stroke: 1px white;
+  color: var(--secondary-black-light);
+}
+.main .calculator .calculatorWrapper .calculatorHeading .calculatorHeading2 {
+  margin: 0;
+}
+.main .calculator .calculatorWrapper .calculatorSubheading {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7725490196);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.main .calculator .calculatorWrapper .calculatorInput {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--primary-color-light);
+  padding: 0.2rem 1.5rem;
+  transition: 0.3s;
+}
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1 {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2 {
+  font-size: 14px;
+}
+.main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput1::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper1 .calculatorInput2::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput1::-webkit-inner-spin-button, .main .calculator .calculatorWrapper .calculatorInput .inputWrapper2 .calculatorInput2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.main .calculator .calculatorWrapper .calculatorBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color-lighter);
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main .calculator .calculatorWrapper .calculatorBtn .calculatorBtnIcon {
+  font-size: 18px;
+  transition: 0.3s;
+}
+.main .calculator .calculatorWrapper .calculatorBtn:hover .calculatorBtnIcon {
+  transform: translateX(4px);
+}
+.main .calculator .calculatorWrapper .calculatorBottom {
+  margin-top: 1.5rem;
+}
+.main .calculator .calculatorWrapper .calculatorBottom .calculatorImgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  padding: 1.5rem;
+  padding-bottom: 0rem;
+}
+.footer .footerWrapper .footerLogo .footerLogo1 {
+  color: var(--secondary-black-light);
+  -webkit-text-stroke: 1px white;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.footer .footerWrapper .footerLogo .footerLogo2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.footer .footerWrapper .footerNewsletter h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.footer .footerWrapper .footerNewsletter input {
+  width: 100%;
+  height: 70px;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  font-size: 15px;
+  transition: 0.3s;
+}
+.footer .footerWrapper .footerNewsletter input::placeholder {
+  opacity: 0.7;
+}
+.footer .footerWrapper .footerNewsletter button {
+  outline: none;
+  border: 1px solid var(--primary-color-lighter);
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer .footerWrapper .footerNavLinks {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 3rem;
+}
+.footer .footerWrapper .footerNavLinks .footerServicesLinks, .footer .footerWrapper .footerNavLinks .footerPricingLinks, .footer .footerWrapper .footerNavLinks .footerCompanyLinks {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footerWrapper .footerNavLinks .footerServicesLinks h5, .footer .footerWrapper .footerNavLinks .footerPricingLinks h5, .footer .footerWrapper .footerNavLinks .footerCompanyLinks h5 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  margin-top: 1rem;
+}
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  opacity: 0.8;
+  transition: color 0.3s;
+}
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a {
+  transition: color 0.3s;
+}
+.footer .footerWrapper .footerNavLinks .footerServicesLinks .footerCompanyLinksWrapper a:hover, .footer .footerWrapper .footerNavLinks .footerPricingLinks .footerCompanyLinksWrapper a:hover, .footer .footerWrapper .footerNavLinks .footerCompanyLinks .footerCompanyLinksWrapper a:hover {
+  color: var(--primary-color);
+}
+.footer .footerWrapper .copyrightSocial {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer .footerWrapper .copyrightSocial .footerSocialLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footerWrapper .copyrightSocial .footerSocialLinks a {
+  background-color: var(--primary-color);
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.footer .footerWrapper .copyrightSocial .footerSocialLinks a .socialLinksIcon {
+  font-size: 1.4rem;
+}
+.footer .footerWrapper .copyrightSocial .footerSocialLinks a:hover {
+  background-color: var(--primary-color);
+}
+.footer .footerWrapper .copyrightSocial .copyright {
+  margin-bottom: 1rem;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.footer .scrollUp {
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: -30%;
+  right: 2rem;
+  padding: 0.3rem 0.4rem;
+  max-width: max-content;
+  border: 1px solid var(--primary-color-lightest);
+  z-index: 1000;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.footer .scrollUp .scrollUpIcon {
+  color: white;
+  font-size: 20px;
+}
+.footer .scrollUp:hover {
+  transform: translateY(-6px);
 }

@@ -21,6 +21,8 @@
     "@mui/material": "^5.10.2",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
+    "react-router-dom": "^6.3.0",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.54.5"
   }
 }

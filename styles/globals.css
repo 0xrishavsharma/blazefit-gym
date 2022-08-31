@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: 'Kaushan Script', cursive;
   font-family: 'Space Grotesk', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
