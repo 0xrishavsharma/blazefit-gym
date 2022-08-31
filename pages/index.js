@@ -62,6 +62,15 @@ if (typeof window !== "undefined") {
   window.addEventListener('scroll', scrollBackground)
 }
 
+// Clicking on logo will bring back to home page
+if (typeof window !== "undefined") {
+  let logoText = document.querySelector("#logoText");
+  logoText.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+  })
+}
+
+
 
 // ScrollUp
 const scrollUp = (e) => {
@@ -101,7 +110,7 @@ export default function Home() {
         {/* Navigation */}
         <div className={styles.navContainer} id="navContainer" >
           <div className={styles.navWrapper} id="navWrapper">
-            <div className={styles.logoText}>
+            <div className={styles.logoText} id="logoText">
               <span className={styles.logoText1}>Blaze</span>
               <span className={styles.logoText2}>fit</span>
             </div>

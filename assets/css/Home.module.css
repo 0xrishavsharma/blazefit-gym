@@ -31,6 +31,7 @@
   margin: 0;
   padding: 0;
   color: var(--primary-color);
+  cursor: pointer;
 }
 .main .navContainer .navWrapper .logoText .logoText1 {
   font-size: 1.4rem;
