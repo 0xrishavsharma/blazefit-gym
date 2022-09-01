@@ -11,7 +11,7 @@ import logo4 from "../public/img/logo4.png";
 const CompanyLogos = () => {
   return (
     // Company Logos 
-    <section className={[styles.logos, styles.section].join(" ")} id="logos">
+    <section className={[styles.logos, styles.section, styles.container].join(" ")} id="logos">
     <div className={styles.logosWrapper}>
       <Image src={logo1} className={styles.logoImg} width="100" height="30" layout={'fixed'} alt="logoImage" />
       <Image src={logo2} className={styles.logoImg} width="110" height="35" layout={'fixed'} alt="logoImage" />

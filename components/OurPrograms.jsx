@@ -5,13 +5,14 @@ import styles from "./../styles/Home.module.scss";
 
 // Logos
 import program1 from "../public/img/program1.png"
-import program4 from "../public/img/program4.png"
+import program2 from "../public/img/program2.png"
 import program3 from "../public/img/program3.png"
+import program4 from "../public/img/program4.png"
 
 const OurPrograms = () => {
     return (
         // Our Programs
-        <section className={[styles.programs, styles.section].join(" ")} id="programs">
+        <section className={[styles.programs, styles.section, styles.container].join(" ")} id="programs">
             <div className={styles.programsWrapper}>
                 <div className={styles.programsHeading}>
                     <h4 className={styles.subheading}>Our Programs</h4>
@@ -22,19 +23,25 @@ const OurPrograms = () => {
                         <div className={styles.programsImgContainer}><Image src={program1} width={24} height={24} alt="dumbbell" /></div>
                         <h5>Muscle Strength</h5>
                         <p>Our apex program. Build lean muscle and see visible in just 30 days</p>
-                        <ArrowForwardIcon className={styles.programArrowIcon} />
+                        {/* <ArrowForwardIcon className={styles.programArrowIcon} /> */}
                     </div>
                     <div className={[styles.programsCard, styles.programsCard2].join(" ")}>
                         <div className={styles.programsImgContainer}><Image src={program3} width={24} height={24} alt="dumbbell" /></div>
                         <h5>Weight Management</h5>
-                        <p>Tried everything method to gain weight? &nbsp;There is always a missing piece, we will give you that</p>
-                        <ArrowForwardIcon className={styles.programArrowIcon} />
+                        <p>There is always a missing piece, we will provide you that</p>
+                        {/* <ArrowForwardIcon className={styles.programArrowIcon} /> */}
+                    </div>
+                    <div className={styles.programsCard}>
+                        <div className={styles.programsImgContainer}><Image src={program2} width={24} height={24} alt="dumbbell" /></div>
+                        <h5>Cardio Training</h5>
+                        <p>Our certified trainers will help you to build your stamina. Visible results in 14 days.</p>
+                        {/* <ArrowForwardIcon className={styles.programArrowIcon} /> */}
                     </div>
                     <div className={styles.programsCard}>
                         <div className={styles.programsImgContainer}><Image src={program4} width={24} height={24} alt="dumbbell" /></div>
-                        <h5>Cardio Training</h5>
-                        <p>Our certified trainers will help you to build your stamina. Visible results in 14 days.</p>
-                        <ArrowForwardIcon className={styles.programArrowIcon} />
+                        <h5>Weight Lifting</h5>
+                        <p>Increase your upper body strength under the supervision of our trained professionals</p>
+                        {/* <ArrowForwardIcon className={styles.programArrowIcon} /> */}
                     </div>
                 </div>
             </div>

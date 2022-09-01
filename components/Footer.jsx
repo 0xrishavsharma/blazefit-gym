@@ -78,7 +78,7 @@ const Footer = () => {
 
     return (
         //Footer
-        <section className={[styles.footer, styles.section].join(" ")} id="footer" >
+        <section className={[styles.footer, styles.section, styles.container].join(" ")} id="footer" >
             <div className={styles.footerWrapper}>
                 <div className={styles.footerLogo}>
                     <span className={styles.footerLogo1}>Blaze</span>
@@ -87,7 +87,7 @@ const Footer = () => {
                 <div className={styles.footerNewsletter}>
                     <h5>Get weekly dose of motivation by subscribing to our Free newsletter</h5>
                     <form ref={newsletterRef}>
-                        <input type="email" id="newsletterInput" name="user_email" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-zA-Z]{2,}" placeholder='Your email' />
+                        <input type="email" id="newsletterInput" name="user_email" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-zA-Z]{2,}" placeholder='Your email' required />
                         <p className={styles.newsletterError} id="newsletterError" style={{ margin: "0", transition: "0.3s" }}></p>
                         <button onClick={sendEmail} type='submit' className="submitBtn" id="submitBtn">Subscribe</button>
                     </form>
