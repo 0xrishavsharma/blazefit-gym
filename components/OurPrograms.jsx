@@ -37,7 +37,7 @@ const OurPrograms = () => {
                         <p>Our certified trainers will help you to build your stamina. Visible results in 14 days.</p>
                         {/* <ArrowForwardIcon className={styles.programArrowIcon} /> */}
                     </div>
-                    <div className={styles.programsCard}>
+                    <div className={[styles.programsCard, styles.programsCard4].join(" ")}>
                         <div className={styles.programsImgContainer}><Image src={program4} width={24} height={24} alt="dumbbell" /></div>
                         <h5>Weight Lifting</h5>
                         <p>Increase your upper body strength under the supervision of our trained professionals</p>

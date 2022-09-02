@@ -29,7 +29,7 @@ const Footer = () => {
             window.scrollTo(0, 0);
         })
     }
-   
+
 
     // EmailJS
     const newsletterRef = useRef();
@@ -80,50 +80,58 @@ const Footer = () => {
         //Footer
         <section className={[styles.footer, styles.section, styles.container].join(" ")} id="footer" >
             <div className={styles.footerWrapper}>
-                <div className={styles.footerLogo}>
-                    <span className={styles.footerLogo1}>Blaze</span>
-                    <span className={styles.footerLogo2}>fit</span>
-                </div>
-                <div className={styles.footerNewsletter}>
-                    <h5>Get weekly dose of motivation by subscribing to our Free newsletter</h5>
-                    <form ref={newsletterRef}>
-                        <input type="email" id="newsletterInput" name="user_email" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-zA-Z]{2,}" placeholder='Your email' required />
-                        <p className={styles.newsletterError} id="newsletterError" style={{ margin: "0", transition: "0.3s" }}></p>
-                        <button onClick={sendEmail} type='submit' className="submitBtn" id="submitBtn">Subscribe</button>
-                    </form>
-                </div>
-                <div className={styles.footerNavLinks}>
-                    <div className={styles.footerServicesLinks}>
-                        <h5>Services</h5>
-                        <div className={styles.footerCompanyLinksWrapper}>
-                            <a href=""><li>Muscle Strength</li></a>
-                            <a href=""><li>Weight Management</li></a>
-                            <a href=""><li>Cardio Training</li></a>
+                <div className={styles.footerInnerWrapper}>
+                    <div className={styles.footerSection1}>
+                        <div className={styles.footerLogo}>
+                            <span className={styles.footerLogo1}>Blaze</span>
+                            <span className={styles.footerLogo2}>fit</span>
                         </div>
+                        <div className={styles.footerNewsletter}>
+                            <h5>Get weekly dose of motivation by subscribing to our Free newsletter</h5>
+                            <form ref={newsletterRef}>
+                                <div className={styles.formInnerWrapper}>
+                                    <input type="email" id="newsletterInput" name="user_email" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-zA-Z]{2,}" placeholder='Your email' required />
+                                    <p className={styles.newsletterError} id="newsletterError" style={{ margin: "0", transition: "0.3s" }}></p>
+                                </div>
+                                <button onClick={sendEmail} type='submit' className="submitBtn" id="submitBtn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div className={styles.footerSection2}>
+                        <div className={styles.footerNavLinks}>
+                            <div className={styles.footerServicesLinks}>
+                                <h5>Services</h5>
+                                <div className={styles.footerCompanyLinksWrapper}>
+                                    <a href=""><li>Muscle Strength</li></a>
+                                    <a href=""><li>Weight Management</li></a>
+                                    <a href=""><li>Cardio Training</li></a>
+                                </div>
 
-                    </div>
-                    <div className={styles.footerPricingLinks}>
-                        <h5>Pricing</h5>
-                        <div className={styles.footerCompanyLinksWrapper}>
-                            <a href=""><li>Basic</li></a>
-                            <a href=""><li>Gold</li></a>
-                            <a href=""><li>Premium</li></a>
-                        </div>
-                    </div>
-                    <div className={styles.footerCompanyLinks}>
-                        <h5>About Us</h5>
-                        <div className={styles.footerCompanyLinksWrapper}>
-                            <a href=""><li>Contact Us</li></a>
-                            <a href=""><li>Careers</li></a>
-                            <a href=""><li>Partners</li></a>
+                            </div>
+                            <div className={styles.footerPricingLinks}>
+                                <h5>Pricing</h5>
+                                <div className={styles.footerCompanyLinksWrapper}>
+                                    <a href=""><li>Basic</li></a>
+                                    <a href=""><li>Gold</li></a>
+                                    <a href=""><li>Premium</li></a>
+                                </div>
+                            </div>
+                            <div className={styles.footerCompanyLinks}>
+                                <h5>About Us</h5>
+                                <div className={styles.footerCompanyLinksWrapper}>
+                                    <a href=""><li>Contact Us</li></a>
+                                    <a href=""><li>Careers</li></a>
+                                    <a href=""><li>Partners</li></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className={[styles.copyrightSocial, styles.section].join(" ")}>
                     <div className={styles.footerSocialLinks}>
-                       <Link href="" ><a href="https://www.facebook.com"><FacebookRoundedIcon className={styles.socialLinksIcon} /></a></Link>
-                        <Link href="" ><a href="https://www.instagram.com"><InstagramIcon className={styles.socialLinksIcon} /></a></Link>
-                        <Link href="" ><a href="https://www.twitter.com"><TwitterIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="https://www.facebook.com"><a ><FacebookRoundedIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="https://www.instagram.com"><a ><InstagramIcon className={styles.socialLinksIcon} /></a></Link>
+                        <Link href="https://www.twitter.com"><a ><TwitterIcon className={styles.socialLinksIcon} /></a></Link>
                         <Link href="https://www.linkedin.com"><a ><LinkedInIcon className={styles.socialLinksIcon} /></a></Link>
                     </div>
                     <div className={[styles.copyright].join(" ")}>
